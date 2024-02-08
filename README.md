@@ -6,4 +6,6 @@ In this small project, the following technologies were used: NodeJS, Webpack, EJ
 
 PT: Após ficar um tempo sumido. Eu resolvi fazer esse" Projeto ". Que o mesmo consiste em criar uma Agenda, com um pequeno sistema de Registro/Login. Você pode se registrar, e logar. Cada usuário terá uma "sessão individual", aonde poderá criar seus próprios contatos, claro, de forma simples. Cada usuário, poderá acessar apenas seus "próprios contatos". 
 
-Nesse pequeno projeto, foi usando as seguintes tecnologias: NodeJS, Webpack, EJS. 
+Nesse pequeno projeto, foi usando as seguintes tecnologias: NodeJS, Webpack, EJS e MariaDB.
+
+![Agenda---Google-Chrome-2024-02-08-06-26-41](https://github.com/kuanzitto/Agenda-NodeJS-Webpack/assets/120482264/71da3dca-2683-41ed-89dc-ecd783a38d3b)
