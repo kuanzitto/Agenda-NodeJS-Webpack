@@ -1,0 +1,33 @@
+<%- include("Includes/head") %>
+<%- include("Includes/navBar")%>
+
+    <h1>Editar Contato</h1>
+    <h2>Edite os dados de seus contatos!</h2>
+
+    <div class="container__Contact">
+        <form action="/<%= user._id %>/editar/editado/<%= ConctEdit._id%>" method="post" autocomplete="off">
+            <div class="form__Group">
+                <label for="email">Nome: </label>
+                <input type="text" name="nome" class="input__Nome" value="<%= ConctEdit.nome %>">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="sobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" class="input__SobreNome" value="<%= ConctEdit.sobrenome %>">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="senha">E-mail: </label>
+                <input type="text" name="email" autocomplete="off" class="input__Email" value="<%= ConctEdit.email %>">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="senha">Telefone: </label>
+                <input type="text" maxlength="14" name="telefone" autocomplete="off" class="input__Telefone" value="<%= ConctEdit.telefone %>">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+                <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+<%- include("Includes/footer") %>

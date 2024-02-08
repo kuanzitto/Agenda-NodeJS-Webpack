@@ -1,0 +1,35 @@
+<%- include("Includes/head") %>
+<%- include("Includes/navBar")%>
+
+    <h1>Contato</h1>
+    <h2>Crie um contato logo abaixo: </h2>
+
+    <%- include("Includes/AlertMsg")%>
+
+    <div class="container__Contact">
+        <form action="/contato/<%= user._id %>/criado" method="post" autocomplete="off">
+            <div class="form__Group">
+                <label for="email">Nome: </label>
+                <input type="text" name="nome" class="input__Nome">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="sobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" class="input__SobreNome">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="senha">E-mail: </label>
+                <input type="text" name="email" autocomplete="off" class="input__Email">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="senha">Telefone: </label>
+                <input type="text" maxlength="14" name="telefone" autocomplete="off" class="input__Telefone">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+                <button type="submit">Criar</button>
+        </form>
+    </div>
+
+<%- include("Includes/footer") %>

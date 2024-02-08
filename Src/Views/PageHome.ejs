@@ -1,0 +1,32 @@
+<%- include("Includes/head") %>
+<%- include("Includes/navBar")%>
+
+    <h1>Agenda</h1>
+    <h2>Seus contatos estão logo abaixo: </h2>
+
+    <%- include("Includes/AlertMsg")%>
+
+    <div class="container__ConctList">
+        <table>
+            <% if(!user) { %>
+                <span>Você precisa estar logado para criar contato!</span>
+            <% } else { %>
+                <% if(!contato.length) {%>
+                    <span>Não há contatos para mostrar!</span>                
+            <% } else { %>
+                <% contato.forEach(list => { %>
+                    <tr>
+                        <td> <%= list.nome %> </td>
+                        <td> <%= list.sobrenome %> </td>
+                        <td> <%= list.email %> </td>
+                        <td> <%= list.telefone %> </td>
+                        <td> <a href="/editar/<%= list._id %>" class="bnt__Edit"> Editar </a> </td>
+                        <td> <a href="/deletar/<%= list._id %>" class="bnt__Delet"> Deletar </a> </td>
+                    </tr>
+                <% }) %>
+            <% } %>
+            <% } %>
+        </table>
+    </div>
+
+<%- include("Includes/footer") %>

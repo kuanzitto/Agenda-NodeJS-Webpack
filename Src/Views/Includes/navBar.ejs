@@ -1,0 +1,21 @@
+<div class="nav__Bar">
+    <% if(!user){ %>
+        <a class="agenda" href="/">Agenda</a>
+    <% } else { %>
+        <a class="agenda" href="/<%= user._id%>">Agenda</a>
+        <% } %>
+    <ul class="dropdown">
+        <li> 
+            <i class="fa-solid fa-user"></i>
+            <div class="drop__Options">
+                <% if(!user) { %>
+                <a href="/login">Login</a>
+                <a href="/cadastrar">Cadastrar</a>
+                <% } else { %>
+                    <a href="/<%= user._id %>/contato/">Contato</a>
+                    <a href="/<%= user._id %>/logout">Logout</a>
+                <% }%>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,25 @@
+<%- include("Includes/head") %>
+<%- include("Includes/navBar")%>
+
+    <h1>Cadastro</h1>
+    <h2>Acaso não possua uma conta, faça seu registro logo abaixo: </h2>
+
+    <%- include("Includes/AlertMsg")%>
+
+    <div class="container__Form">
+        <form action="/cadastrar/registrado" method="post">
+            <div class="form__Group">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" class="input__Email">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+            <div class="form__Group">
+                <label for="senha">Senha:</label>
+                <input type="current-password" name="senha" class="input__Senha">
+                <p class="errors_Front" name="errors">⠀</p>
+            </div>
+                <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+<%- include("Includes/footer") %>

@@ -1,0 +1,32 @@
+<% if(sucess.length > 0 ) { %>
+    <div class="container__AlertMsgSucess container">
+        <div class="icon__Check">
+            <i class="fas fa-check"></i>
+        </div>
+        <div class="text__Style">
+            <% sucess.forEach(sus => { %>
+                <h2> Sucess </h2>
+                <p> <%= sus %> </p>
+            <% }) %>
+        </div>
+        <button class="continue" name="continue"> Continuar </button>
+    </div>    
+<% } %>
+
+<% if(errors.length > 0 ) { %>
+    <div class="container__AlertMsgError container">
+        <div class="icon__CheckBan">
+            <i class="fa-solid fa-ban"></i>
+        </div>
+        <div class="text__Style">
+            <% errors.forEach(err => { %>
+                <h2> ERROR </h2>
+                <p> <%= err %> </p>
+            <% }) %>
+        </div>
+        <button class="tryagain" name="bnt tryagain"> Tenter Novamente </button>
+    </div>    
+<% } %>
+
+
+
